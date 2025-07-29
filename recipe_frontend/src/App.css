@@ -1,0 +1,132 @@
+/* THEME COLORS - Monochrome Black & White for Recipe Explorer */
+:root {
+  --primary: #111;             /* Black for primary */
+  --secondary: #444;           /* Dark gray */
+  --accent: #666;              /* Mid gray used for accents */
+  --bg-primary: #fff;          /* White background */
+  --bg-secondary: #f4f4f4;     /* Very light gray */
+  --text-primary: #111;        /* Nearly black text */
+  --text-secondary: #666;      /* Mid gray text */
+  --border-color: #ccc;        /* Subtle light gray border */
+  --button-bg: var(--primary); /* Black buttons */
+  --button-text: #fff;         /* White text on buttons */
+}
+
+/* OVERRIDE DARK MODE (only light theme per requirements) */
+[data-theme="dark"] {
+  /* No dark mode, but ensure all variables remain monochrome for accessibility/future-proofing */
+  --bg-primary: #fff;
+  --bg-secondary: #f4f4f4;
+  --text-primary: #111;
+  --text-secondary: #666;
+  --border-color: #ccc;
+  --button-bg: #111;
+  --button-text: #fff;
+}
+
+.App {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "sidemenu main";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 64px 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 140px 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .app-grid {
+    grid-template-areas:
+      "nav"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr;
+  }
+}
+
+.App-logo {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app-main {
+  grid-area: main;
+  min-height: 70vh;
+  background: var(--bg-secondary);
+  position: relative;
+}
+.empty-state {
+  text-align: center;
+  color: #bbb;
+  margin: 5rem 0 1rem 0;
+}
+
+.App-header {
+  display: none;
+}
+
+.App-link {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

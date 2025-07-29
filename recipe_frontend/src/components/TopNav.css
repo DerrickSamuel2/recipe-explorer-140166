@@ -1,0 +1,85 @@
+.topnav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 2rem;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(20, 20, 20, 0.08);
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+.brand {
+  color: #fff;
+}
+
+.nav-search {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input {
+  font-size: 1rem;
+  padding: 7px 16px;
+  border-radius: 24px;
+  border: 1px solid #bbb;
+  outline: none;
+  width: 256px;
+  max-width: 80vw;
+  background: #fff;
+  color: #111;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.favorites-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.13);
+  display: flex;
+  align-items: center;
+}
+
+.favorites-btn:hover {
+  background: #222;
+}
+
+.fav-count {
+  font-weight: bold;
+  margin-left: 6px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .topnav {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .nav-search {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
