@@ -1,7 +1,7 @@
 .recipe-card {
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 6px 32px rgba(80, 80, 80, 0.09);
+  box-shadow: 0 6px 32px rgba(30, 30, 30, 0.09);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 .recipe-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 36px rgba(255,87,34, 0.15);
+  box-shadow: 0 12px 36px rgba(20,20,20,0.13); /* light grayscale shadow */
 }
 .recipe-img-wrapper {
   position: relative;
@@ -27,7 +27,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-bottom: 3px solid var(--primary, #4CAF50);
+  border-bottom: 3px solid var(--primary, #111);
 }
 .fav-toggle-btn {
   position: absolute;
@@ -36,16 +36,15 @@
   background: none;
   border: none;
   font-size: 1.55rem;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(100,0,0,0.14);
+  color: #222;
+  text-shadow: none;
   cursor: pointer;
   outline: none;
   z-index: 2;
-  transition: transform 0.14s;
+  transition: transform 0.14s, color 0.12s;
 }
 .fav-toggle-btn.is-fav {
-  color: var(--accent, #FF5722);
-  text-shadow: 0 0 8px #fff0;
+  color: #111; /* black heart when favored */
 }
 .fav-toggle-btn:active {
   transform: scale(1.18);
@@ -59,7 +58,7 @@
 .recipe-title {
   font-size: 1.18rem;
   font-weight: 600;
-  color: #2E2A22;
+  color: #111;
   margin-bottom: 0.22rem;
 }
 .recipe-meta {
@@ -67,13 +66,13 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.88rem;
-  color: #888;
+  color: #444;
   gap: 0.9em;
 }
 .cuisine {
-  color: var(--primary, #4CAF50);
+  color: var(--primary, #111);
   font-weight: 500;
 }
 .ingredients {
-  color: #555;
+  color: #777;
 }

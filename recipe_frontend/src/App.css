@@ -1,37 +1,27 @@
-/* THEME COLORS for Recipe Explorer */
+/* THEME COLORS - Monochrome Black & White for Recipe Explorer */
 :root {
-  --primary: #4CAF50;
-  --secondary: #FFC107;
-  --accent: #FF5722;
-  --bg-primary: #fff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #232323;
-  --text-secondary: #666;
-  --border-color: #e0e0e0;
-  --button-bg: var(--primary);
-  --button-text: #fff;
+  --primary: #111;             /* Black for primary */
+  --secondary: #444;           /* Dark gray */
+  --accent: #666;              /* Mid gray used for accents */
+  --bg-primary: #fff;          /* White background */
+  --bg-secondary: #f4f4f4;     /* Very light gray */
+  --text-primary: #111;        /* Nearly black text */
+  --text-secondary: #666;      /* Mid gray text */
+  --border-color: #ccc;        /* Subtle light gray border */
+  --button-bg: var(--primary); /* Black buttons */
+  --button-text: #fff;         /* White text on buttons */
 }
 
 /* OVERRIDE DARK MODE (only light theme per requirements) */
 [data-theme="dark"] {
+  /* No dark mode, but ensure all variables remain monochrome for accessibility/future-proofing */
   --bg-primary: #fff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #232323;
+  --bg-secondary: #f4f4f4;
+  --text-primary: #111;
   --text-secondary: #666;
-  --border-color: #e0e0e0;
-  --button-bg: var(--primary);
+  --border-color: #ccc;
+  --button-bg: #111;
   --button-text: #fff;
-}
-
-[data-theme="dark"] {
-  /* Dark theme colors */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #282c34;
-  --text-primary: #ffffff;
-  --text-secondary: #61dafb;
-  --border-color: #404040;
-  --button-bg: #0056b3;
-  --button-text: #ffffff;
 }
 
 .App {

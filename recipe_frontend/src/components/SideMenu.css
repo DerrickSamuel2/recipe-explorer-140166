@@ -1,11 +1,11 @@
 .sidemenu {
   grid-area: sidemenu;
   padding: 2rem 1rem 1rem 1rem;
-  background: var(--secondary, #FFC107);
-  border-right: 1px solid #eee;
+  background: #fafafa;
+  border-right: 1px solid #ccc;
   min-width: 200px;
   max-width: 220px;
-  box-shadow: 1px 0 6px rgba(80,80,80,0.04);
+  box-shadow: 1px 0 6px rgba(40,40,40,0.03);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -27,7 +27,7 @@
 .filter-title {
   font-size: 1.14rem;
   font-weight: 600;
-  color: #333;
+  color: #111;
   letter-spacing: 1px;
   margin-bottom: 0.4rem;
 }
@@ -39,27 +39,28 @@
 .filter-label {
   font-size: 0.98rem;
   font-weight: 500;
-  color: #2d2d2d;
+  color: #444;
 }
 select {
   padding: 5px 10px;
-  border: 1px solid #aaa;
+  border: 1px solid #bbb;
   border-radius: 7px;
   font-size: 1rem;
-  background: #fffce9;
+  background: #fff;
 }
 .clear-btn {
-  background: var(--accent, #FF5722);
-  color: #fff;
-  border: none;
+  background: #fff;
+  color: #111;
+  border: 1.5px solid #111;
   padding: 6px 0;
   margin-top: 0.7rem;
   border-radius: 7px;
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 .clear-btn:hover {
-  background: #d84315;
+  background: #111;
+  color: #fff;
 }

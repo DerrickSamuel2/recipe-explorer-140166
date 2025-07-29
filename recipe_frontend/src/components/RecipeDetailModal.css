@@ -13,7 +13,7 @@
   border-radius: 18px;
   max-width: 460px;
   width: 96vw;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.11);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
   padding: 1.6rem 2rem 2rem 2rem;
   position: relative;
   animation: modalPopup 0.25s cubic-bezier(0.49,1.64,0.63,1.05);
@@ -31,7 +31,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: #999;
+  color: #888;
   cursor: pointer;
   z-index: 3;
 }
@@ -44,14 +44,14 @@
 .modal-header h2 {
   margin: 0;
   font-size: 1.30rem;
-  color: var(--primary, #4CAF50);
+  color: #111;
 }
 .fav-toggle-btn {
   font-size: 1.35rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--accent, #FF5722);
+  color: #222; /* monochrome heart, changes to #111 when active (controlled in RecipeCard.css) */
 }
 .modal-img {
   width: 100%;
@@ -67,7 +67,7 @@
 .modal-body {
   margin-top: 0.4rem;
   font-size: 1.06rem;
-  color: #262626;
+  color: #222;
 }
 ul {
   margin: 0.1em 0 0.2em 1.6em;
@@ -77,3 +77,4 @@ ul {
     padding: 1rem 0.5rem;
   }
 }
+
