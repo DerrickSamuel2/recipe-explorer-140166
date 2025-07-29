@@ -1,13 +1,26 @@
-/* CSS Variables for Theme Management */
+/* THEME COLORS for Recipe Explorer */
 :root {
-  /* Light theme colors */
-  --bg-primary: #ffffff;
+  --primary: #4CAF50;
+  --secondary: #FFC107;
+  --accent: #FF5722;
+  --bg-primary: #fff;
   --bg-secondary: #f8f9fa;
-  --text-primary: #282c34;
-  --text-secondary: #61dafb;
-  --border-color: #e9ecef;
-  --button-bg: #007bff;
-  --button-text: #ffffff;
+  --text-primary: #232323;
+  --text-secondary: #666;
+  --border-color: #e0e0e0;
+  --button-bg: var(--primary);
+  --button-text: #fff;
+}
+
+/* OVERRIDE DARK MODE (only light theme per requirements) */
+[data-theme="dark"] {
+  --bg-primary: #fff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #232323;
+  --text-secondary: #666;
+  --border-color: #e0e0e0;
+  --button-bg: var(--primary);
+  --button-text: #fff;
 }
 
 [data-theme="dark"] {
@@ -22,16 +35,38 @@
 }
 
 .App {
-  text-align: center;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "sidemenu main";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 64px 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 140px 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .app-grid {
+    grid-template-areas:
+      "nav"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr;
+  }
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,17 +75,20 @@
   }
 }
 
-.App-header {
-  background-color: var(--bg-secondary);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: var(--text-primary);
-  transition: background-color 0.3s ease;
+.app-main {
+  grid-area: main;
+  min-height: 70vh;
+  background: var(--bg-secondary);
   position: relative;
+}
+.empty-state {
+  text-align: center;
+  color: #bbb;
+  margin: 5rem 0 1rem 0;
+}
+
+.App-header {
+  display: none;
 }
 
 .App-link {
